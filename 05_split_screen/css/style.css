@@ -1,0 +1,115 @@
+/** Variables */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+h1 {
+  font-size: 5rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: "Playfair Display", serif; }
+
+button {
+  background: none;
+  border: none; }
+
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 2.6rem;
+  padding-top: 1.5rem;
+  width: 15rem;
+  text-align: center;
+  color: white;
+  border: 3px solid #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+  transition: all 0.2s; }
+
+.screen.left .button:hover {
+  background-color: rgba(122, 80, 51, 0.62);
+  border-color: rgba(122, 80, 51, 0.62); }
+
+.screen.right .button:hover {
+  background-color: rgba(240, 40, 40, 0.47);
+  border-color: rgba(240, 40, 40, 0.47); }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #444; }
+  .container .screen {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden; }
+
+.screen.left {
+  left: 0;
+  background: url("https://www.cookingclassy.com/wp-content/uploads/2018/01/chocolate-covered-strawberry-cupcakes-3.jpg") center center no-repeat;
+  background-size: cover; }
+  .screen.left:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(137, 89, 57, 0.62); }
+
+.screen.right {
+  right: 0;
+  background: url("https://www.halfbakedharvest.com/wp-content/uploads/2019/04/Lemon-Coconut-Naked-Cake-with-Whipped-Vanilla-Buttercream-1.jpg") center center no-repeat;
+  background-size: cover; }
+  .screen.right:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(243, 88, 88, 0.47); }
+
+.screen.left, .screen.right, .screen.right:before, .screen.left:before {
+  transition: 1000ms all ease-in-out; }
+
+.hover-left .left {
+  width: 75%; }
+
+.hover-left .right {
+  width: 25%; }
+
+.hover-left .right:before {
+  z-index: 2; }
+
+.hover-right .right {
+  width: 75%; }
+
+.hover-right .left {
+  width: 25%; }
+
+.hover-right .left:before {
+  z-index: 2; }
+
+/**** Responsive **** */
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem; }
+
+  .button {
+    width: 12rem; } }
+@media(max-height: 700px) {
+  .button {
+    top: 70%; } }
+
+/*# sourceMappingURL=style.css.map */
